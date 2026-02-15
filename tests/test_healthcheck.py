@@ -1,6 +1,5 @@
 import requests
-
-BASE_URL = "https://jsonplaceholder.typicode.com"
+from config.settings import BASE_URL
 
 
 def test_api_is_up():

@@ -1,7 +1,5 @@
 from utils.api_client import APIClient
-
-BASE_URL = "https://jsonplaceholder.typicode.com"
-
+from config.settings import BASE_URL
 
 def test_get_posts():
     client = APIClient(BASE_URL)
