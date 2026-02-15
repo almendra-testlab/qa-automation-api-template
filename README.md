@@ -28,7 +28,7 @@ The goal is learning **how automation is done in real jobs**, not just writing a
 
 ---
 
-Project Structure
+## Project Structure
 tests/
     jsonplaceholder/
         test_healthcheck.py
