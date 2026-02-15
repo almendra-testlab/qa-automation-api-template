@@ -1,4 +1,8 @@
 # QA Automation API Template
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Pytest](https://img.shields.io/badge/Tests-pytest-green)
+![Status](https://img.shields.io/badge/Status-learning%20project-informational)
+
 
 A professional API test automation starter template for testers who want to build real-world skills and get hired faster.
 
