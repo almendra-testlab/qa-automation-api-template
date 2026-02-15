@@ -1,4 +1,8 @@
 import requests
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 class APIClient:
@@ -7,4 +11,12 @@ class APIClient:
         self.base_url = base_url
 
     def get(self, endpoint: str):
-        return requests.get(f"{self.base_url}{endpoint}")
+        url = f"{self.base_url}{endpoint}"
+        logger.info(f"GET request to: {url}")
+
+        response = requests.get(url)
+
+        logger.info(f"Response status: {response.status_code}")
+
+        return response
+
