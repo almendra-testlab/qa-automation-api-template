@@ -28,27 +28,23 @@ The goal is learning **how automation is done in real jobs**, not just writing a
 
 ---
 
-## Project Structure
-
+Project Structure
 tests/
-
     jsonplaceholder/
-
         test_healthcheck.py
-
         test_example.py
-
     fakestore/
+        test_products.py
 
-        test_fakestore_products.py
 utils/
-    api_client.py        # reusable HTTP client
-    validators.py        # reusable response validators
+    api_client.py  # reusable HTTP clien
+    validators.py  # reusable response validators
 
 config/
-    settings.py          # multiple base URLs configuration
+    settings.py
 
 pytest.ini
+
 requirements.txt
 
 ---
