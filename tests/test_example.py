@@ -1,6 +1,6 @@
 import pytest
 from utils.api_client import APIClient
-from config.settings import BASE_URL
+from config.settings import JSONPLACEHOLDER_URL
 
 @pytest.mark.api
 @pytest.mark.regression
@@ -10,7 +10,7 @@ from config.settings import BASE_URL
     "/albums",
 ])
 def test_endpoints_return_data(endpoint):
-    client = APIClient(BASE_URL)
+    client = APIClient(JSONPLACEHOLDER_URL)
     response = client.get(endpoint)
 
     assert response.status_code == 200, f"Unexpected status: {response.status_code}"
