@@ -36,3 +36,22 @@ def test_get_single_product_by_id(product_id):
     assert product["id"] == product_id, "Returned product ID mismatch"
 
     validate_product_schema(product)
+
+
+import pytest
+from utils.api_client import APIClient
+from config.settings import FAKESTORE_URL
+
+
+@pytest.mark.api
+@pytest.mark.smoke
+def test_get_nonexistent_product_returns_empty_body():
+    client = APIClient(FAKESTORE_URL)
+    response = client.get("/products/9999")
+
+    assert response.status_code == 200, "API should return 200 for non-existing resource"
+
+    assert response.text == "", "Response body should be empty"
+
+    with pytest.raises(ValueError):
+        response.json()
