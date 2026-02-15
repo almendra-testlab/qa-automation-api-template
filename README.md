@@ -29,44 +29,32 @@ The goal is learning **how automation is done in real jobs**, not just writing a
 ---
 
 ## Project Structure
-tests/
-    jsonplaceholder/
-        test_healthcheck.py
-        test_example.py
-    fakestore/
-        test_products.py
 
-utils/
-    api_client.py  # reusable HTTP clien
-    validators.py  # reusable response validators
-
-config/
-    settings.py
-
-pytest.ini
-
-requirements.txt
+```
+qa-automation-api-template
+│
+├── tests/
+│   ├── jsonplaceholder/
+│   │   ├── test_healthcheck.py
+│   │   └── test_example.py
+│   │
+│   └── fakestore/
+│       └── test_products.py
+│
+├── utils/
+│   ├── api_client.py
+│   └── validators.py
+│
+├── config/
+│   └── settings.py
+│
+├── pytest.ini
+└── requirements.txt
+```
 
 ---
 
 ## What is covered
-
-## What this project demonstrates
-
-This project is designed to simulate real QA Automation work, not just practice syntax.
-
-By completing and understanding this repository you practice:
-
-* Designing maintainable automated tests
-* Validating API contracts instead of only status codes
-* Writing reusable validation logic
-* Testing positive and negative scenarios
-* Running parametrized test suites
-* Structuring a scalable automation project
-* Working with multiple services in the same framework
-
-This reflects the type of work expected from a Junior QA Automation engineer in real teams.
-
 
 ### Contract Testing
 
@@ -74,11 +62,11 @@ Validate API response structure and data types using reusable validators.
 
 ### Parametrized Testing
 
-Run the same test across multiple product IDs without duplicating code.
+Run the same test across multiple inputs without duplicating code.
 
 ### Negative Testing
 
-Validate behavior for non-existing resources (empty response handling).
+Validate behavior for non-existing resources and unexpected responses.
 
 ### Test Markers
 
@@ -91,6 +79,23 @@ Organize suites using:
 ### Multi-API Support
 
 Switch between different services without modifying the framework.
+
+---
+
+## What this project demonstrates
+
+This project is designed to simulate real QA Automation work, not just practice syntax.
+
+By completing and understanding this repository you practice:
+
+* Designing maintainable automated tests
+* Validating API contracts instead of only status codes
+* Writing reusable validation logic
+* Testing positive and negative scenarios
+* Structuring a scalable automation project
+* Working with multiple services in the same framework
+
+This reflects the type of work expected from a Junior QA Automation engineer in real teams.
 
 ---
 
@@ -128,22 +133,16 @@ pytest
 
 This project supports HTML test reports using `pytest-html`.
 
-Run:
-
 ```
 pytest --html=report.html
 ```
 
-After execution, a `report.html` file will be generated in the project root.
+After execution a `report.html` file will be generated in the project root.
+Open it in your browser to view execution results.
 
-Open it in your browser to view:
+The report is not stored in the repository because it is generated dynamically.
 
-* passed and failed tests
-* execution duration
-* environment information
-
-The report file is not stored in the repository because it is generated dynamically for each execution.
-
+---
 
 ## Why this project exists
 
@@ -161,5 +160,6 @@ The intention is to help testers build a portfolio that looks like professional 
 
 ## Author
 
-Almendra Polezzeli
+Almendra Polezzeli<br>
 almendra-testlab
+
