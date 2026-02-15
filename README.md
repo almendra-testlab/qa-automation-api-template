@@ -51,6 +51,23 @@ requirements.txt
 
 ## What is covered
 
+## What this project demonstrates
+
+This project is designed to simulate real QA Automation work, not just practice syntax.
+
+By completing and understanding this repository you practice:
+
+* Designing maintainable automated tests
+* Validating API contracts instead of only status codes
+* Writing reusable validation logic
+* Testing positive and negative scenarios
+* Running parametrized test suites
+* Structuring a scalable automation project
+* Working with multiple services in the same framework
+
+This reflects the type of work expected from a Junior QA Automation engineer in real teams.
+
+
 ### Contract Testing
 
 Validate API response structure and data types using reusable validators.
@@ -106,6 +123,27 @@ pytest
 ```
 
 ---
+
+## Generating test reports
+
+This project supports HTML test reports using `pytest-html`.
+
+Run:
+
+```
+pytest --html=report.html
+```
+
+After execution, a `report.html` file will be generated in the project root.
+
+Open it in your browser to view:
+
+* passed and failed tests
+* execution duration
+* environment information
+
+The report file is not stored in the repository because it is generated dynamically for each execution.
+
 
 ## Why this project exists
 
