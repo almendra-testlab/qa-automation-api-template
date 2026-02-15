@@ -41,7 +41,6 @@ tests/
     fakestore/
 
         test_fakestore_products.py
-
 utils/
     api_client.py        # reusable HTTP client
     validators.py        # reusable response validators
