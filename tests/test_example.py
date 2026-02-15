@@ -2,7 +2,8 @@ import pytest
 from utils.api_client import APIClient
 from config.settings import BASE_URL
 
-
+@pytest.mark.api
+@pytest.mark.regression
 @pytest.mark.parametrize("endpoint", [
     "/posts",
     "/comments",
